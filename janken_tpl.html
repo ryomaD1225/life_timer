@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+  <ul>
+    <li id="gu_btn"><img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images-1.png"></li>
+    <li id="cho_btn"><img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images.png"></li>
+    <li id="par_btn"><img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images-2.png"></li>
+  </ul>
+  <div id="pc_hands"></div>
+  <div id="judgment"></div>
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+$("#gu_btn").on("click",function(){
+
+    var result = Math.floor(Math.random()*3);
+    if(result==0){
+      $("#pc_hands").html('<iframe height="100%" src="https://media.giphy.com/media/nXxOjZrbnbRxS/giphy.gif">');
+      $("#judgment").html("あなたの勝ちです");
+    }
+
+    if(result==1){
+      $("#pc_hands").html('<img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images-1.png">');
+      $("#judgment").html("引き分けです");
+    }
+
+    if(result==2){
+      $("#pc_hands").html('<img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images-2.png">');
+      $("#judgment").html("あなたの負けです");
+    }
+
+});
+
+$("#cho_btn").on("click",function(){
+  var result = Math.floor(Math.random()*3);
+    if(result==0){
+      $("#pc_hands").html('<img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images.png">');
+      $("#judgment").html("引き分けです");
+    }
+
+    if(result==1){
+      $("#pc_hands").html('<img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images-1.png">');
+      $("#judgment").html("あなたの負けです");
+    }
+
+    if(result==2){
+      $("#pc_hands").html('<iframe src="https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif">');
+      $("#judgment").html("あなたの勝ちです");
+    }
+});
+
+$("#par_btn").on("click",function(){
+  var result = Math.floor(Math.random()*3);
+    if(result==0){
+      $("#pc_hands").html('<img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images.png">');
+      $("#judgment").html("あなたの負けです");
+    }
+
+    if(result==1){
+      $("#pc_hands").html('<iframe src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif">');
+      $("#judgment").html("あなたの勝ちです");
+    }
+
+    if(result==2){
+      $("#pc_hands").html('<img src="/Users/kishirinichiro/Desktop/gs/js01_haifu/kadai/img/images-2.png">');
+      $("#judgment").html("引き分けです");
+    }
+});
+    
+    
+    
+    
+    
+    
+
+</script>
+</body>
+</html>
